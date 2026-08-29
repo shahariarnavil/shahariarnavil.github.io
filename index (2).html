@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD. Shahariar Navil - Medical Technologist CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header .title {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            font-size: 0.95em;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .contact-info a:hover {
+            opacity: 0.8;
+        }
+
+        /* Main Content */
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+            padding: 40px;
+        }
+
+        .sidebar {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .main {
+            padding-right: 20px;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 1.3em;
+            color: #667eea;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .sidebar .section-title {
+            margin-top: 20px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        /* Education */
+        .education-item {
+            margin-bottom: 20px;
+        }
+
+        .education-item h4 {
+            color: #667eea;
+            margin-bottom: 5px;
+            font-size: 1.05em;
+        }
+
+        .education-item .institution {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 3px;
+        }
+
+        .education-item .details {
+            font-size: 0.9em;
+            color: #666;
+            margin: 3px 0;
+        }
+
+        /* Experience */
+        .experience-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+
+        .job-title {
+            font-weight: 700;
+            color: #667eea;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .company {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 3px;
+        }
+
+        .date {
+            font-size: 0.9em;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .job-description {
+            margin-left: 15px;
+            color: #555;
+        }
+
+        .job-description li {
+            margin-bottom: 5px;
+            list-style-position: inside;
+        }
+
+        /* Skills */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: #667eea;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            transition: background 0.3s;
+        }
+
+        .skill-tag:hover {
+            background: #764ba2;
+        }
+
+        /* Personal Info */
+        .info-item {
+            margin-bottom: 12px;
+            font-size: 0.95em;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #667eea;
+            display: inline-block;
+            width: 100px;
+        }
+
+        .info-value {
+            color: #555;
+        }
+
+        /* Training */
+        .training-item {
+            margin-bottom: 15px;
+            padding: 12px;
+            background: white;
+            border-left: 4px solid #667eea;
+            border-radius: 4px;
+        }
+
+        .training-item h5 {
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .training-item p {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        /* Referees */
+        .referee-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .referee-item:last-child {
+            border-bottom: none;
+        }
+
+        .referee-name {
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 3px;
+        }
+
+        .referee-info {
+            font-size: 0.9em;
+            color: #666;
+            margin: 2px 0;
+        }
+
+        /* Download Button */
+        .download-btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .download-btn:hover {
+            background: #764ba2;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .contact-info {
+                gap: 15px;
+                font-size: 0.85em;
+            }
+
+            .main {
+                padding-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>MD. Shahariar Navil</h1>
+            <div class="title">Medical Technologist (CT-Scan & MRI)</div>
+            <div class="contact-info">
+                <span>📱 +880-1710091516 | +880-1404205272</span>
+                <span>📧 <a href="mailto:shahariarnavil@pm.me">shahariarnavil@pm.me</a></span>
+                <span>🌐 <a href="https://www.diagnofibd.com">diagnofibd.com</a></span>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Personal Info -->
+                <div class="section-title">👤 Personal Info</div>
+                <div class="info-item">
+                    <span class="info-label">Address:</span>
+                    <span class="info-value">House no-191, Gopchore Rd, Narayanganj</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">DOB:</span>
+                    <span class="info-value">26 February 2001</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Citizenship:</span>
+                    <span class="info-value">Bangladeshi</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Religion:</span>
+                    <span class="info-value">Muslim</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Blood Group:</span>
+                    <span class="info-value">B (+ve)</span>
+                </div>
+
+                <!-- Skills -->
+                <div class="section-title">🎯 Skills</div>
+                <div class="skills-list">
+                    <span class="skill-tag">Medical Knowledge</span>
+                    <span class="skill-tag">CT Scan</span>
+                    <span class="skill-tag">MRI</span>
+                    <span class="skill-tag">X-Ray</span>
+                    <span class="skill-tag">Analytical</span>
+                    <span class="skill-tag">Problem-solving</span>
+                    <span class="skill-tag">Teamwork</span>
+                </div>
+
+                <!-- Training -->
+                <div class="section-title">📚 Training</div>
+                <div class="training-item">
+                    <h5>Radiology & Imaging Technologist</h5>
+                    <p><strong>Shaheed Suhrawardy Medical College Hospital, Dhaka</strong></p>
+                    <p>✓ Digital Radiography (DR)</p>
+                    <p>✓ Computed Radiography (CR)</p>
+                    <p>✓ Contrast X-ray</p>
+                    <p>✓ CT-Scan & MRI</p>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="main">
+                <!-- Professional Summary -->
+                <div class="section-title">📋 Professional Summary</div>
+                <p>Certified radiologist with years of experience in the field. Comprehensive understanding of imaging techniques and relevant equipment, including CT and MRI X-ray. Passionate about helping people and delivering the best medical care possible. Able to work independently and in multidisciplinary teams.</p>
+
+                <!-- Education -->
+                <div class="section-title">🎓 Education</div>
+                
+                <div class="education-item">
+                    <h4>BSc in Radiology & Imaging Technology</h4>
+                    <div class="institution">Bangladesh University of Health Sciences</div>
+                    <div class="details">Group: Radiology & Imaging Technology | Year: 5th Year</div>
+                </div>
+
+                <div class="education-item">
+                    <h4>Diploma in Radiology & Imaging</h4>
+                    <div class="institution">Ahsania Mission Institute of Medical Technology</div>
+                    <div class="details">Year: 2022 | Reg. No: 43070 | Board: The State Medical Faculty of Bangladesh</div>
+                </div>
+
+                <div class="education-item">
+                    <h4>Secondary School Certificate (SSC)</h4>
+                    <div class="institution">Syedpur Bangabandhu High School</div>
+                    <div class="details">Group: Science | Year: 2018</div>
+                </div>
+
+                <!-- Experience -->
+                <div class="section-title">💼 Professional Experience</div>
+
+                <div class="experience-item">
+                    <div class="job-title">Radiographer</div>
+                    <div class="company">Sajeda Jabber Hospital Ltd.</div>
+                    <div class="date">Aug 2025 – Present</div>
+                    <ul class="job-description">
+                        <li>Perform CT scan</li>
+                        <li>Perform All Conventional & Contrast X-Ray</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">CT-MRI Medical Technologist</div>
+                    <div class="company">Labaid Ltd. (Diagnostics), Chandpur</div>
+                    <div class="date">Aug 2023 – Sep 2025</div>
+                    <ul class="job-description">
+                        <li>Perform CT scan</li>
+                        <li>Perform MRI</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Medical Technologist (Radiology & Imaging)</div>
+                    <div class="company">National Healthcare Network (an BADAS enterprise)</div>
+                    <div class="date">Mar 2023 – Jul 2023</div>
+                    <ul class="job-description">
+                        <li>DR & CR X-Ray machine operating All Conventional x-ray</li>
+                        <li>Contrast X-Ray plane and positioning</li>
+                        <li>Perform CT</li>
+                    </ul>
+                </div>
+
+                <!-- Referees -->
+                <div class="section-title">👥 References</div>
+
+                <div class="referee-item">
+                    <div class="referee-name">Prof. (Brig Gen). Dr. Abdul Quddus (Retd)</div>
+                    <div class="referee-info">MBBS, MCPS, FCPS (Radiology)</div>
+                    <div class="referee-info">Advanced training in MRI (Turkey)</div>
+                    <div class="referee-info">Advisor Radiologist & Head of the Department</div>
+                    <div class="referee-info">Department of Radiology & Imaging, CMH Dhaka Cantt.</div>
+                    <div class="referee-info">📱 01713095289</div>
+                </div>
+
+                <div class="referee-item">
+                    <div class="referee-name">Md. Sizan</div>
+                    <div class="referee-info">Medical Technologist CT & MRI</div>
+                    <div class="referee-info">Popular Diagnostic Center</div>
+                    <div class="referee-info">📱 01725129529</div>
+                </div>
+
+                <button class="download-btn" onclick="window.print()">📥 Download as PDF</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
